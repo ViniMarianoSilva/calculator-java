@@ -33,7 +33,7 @@ public class CalculatorLayout extends JFrame {
 	private JButton btnButtonSeven;
 	private JButton btnButtonEight;
 	private JButton btnButtonNine;
-	private JTextField display;
+	private JLabel display;
 	
 	
 	/**
@@ -66,14 +66,23 @@ public class CalculatorLayout extends JFrame {
 		btnButtonZero.setFont(new Font("Arial", Font.BOLD, 9));
 
 		btnButtonOne = new JButton("1");
+		btnButtonOne.setFont(new Font("Arial", Font.BOLD, 9));
 		btnButtonTwo = new JButton("2");
+		btnButtonTwo.setFont(new Font("Arial", Font.BOLD, 9));
 		btnButtonThree = new JButton("3");
+		btnButtonThree.setFont(new Font("Arial", Font.BOLD, 9));
 		btnButtonFour = new JButton("4");
+		btnButtonFour.setFont(new Font("Arial", Font.BOLD, 9));
 		btnButtonFive = new JButton("5");
+		btnButtonFive.setFont(new Font("Arial", Font.BOLD, 9));
 		btnButtonSix = new JButton("6");
+		btnButtonSix.setFont(new Font("Arial", Font.BOLD, 9));
 		btnButtonSeven = new JButton("7");
+		btnButtonSeven.setFont(new Font("Arial", Font.BOLD, 9));
 		btnButtonEight = new JButton("8");
+		btnButtonEight.setFont(new Font("Arial", Font.BOLD, 9));
 		btnButtonNine = new JButton("9");
+		btnButtonNine.setFont(new Font("Arial", Font.BOLD, 9));
 		
 		btnButtonTwo.addActionListener(new ActionListener() {
 			@Override
@@ -82,27 +91,124 @@ public class CalculatorLayout extends JFrame {
 				ifButtonTwoClicked(e);
 			}
 		});
-		
+		btnButtonOne.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonOneClicked(e);
+			}
+		});
+		btnButtonThree.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonThreeClicked(e);
+			}
+		});
+		btnButtonFour.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonFourClicked(e);
+			}
+		});
+		btnButtonFive.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonFiveClicked(e);
+			}
+		});
+		btnButtonSix.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonSixClicked(e);
+			}
+		});
+		btnButtonSeven.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonSevenClicked(e);
+			}
+		});
+		btnButtonEight.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonEightClicked(e);
+			}
+		});
+		btnButtonNine.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonNineClicked(e);
+			}
+		});
+		btnButtonZero.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonZeroClicked(e);
+			}
+		});
 		JButton btnButtonDot = new JButton(".");
+		btnButtonDot.setFont(new Font("Arial", Font.BOLD, 9));
 		
 		JButton btnButtonDivision = new JButton("/");
+		btnButtonDivision.setFont(new Font("Arial", Font.BOLD, 9));
 		
-		JButton btnButtonMultply = new JButton("X");
-		btnButtonMultply.setFont(new Font("Arial", Font.PLAIN, 9));
+		JButton btnButtonMultply = new JButton("x\r\n");
+		btnButtonMultply.setFont(new Font("Arial", Font.BOLD, 9));
 		
 		JButton btnButtonPlus = new JButton("+");
-		btnButtonPlus.setFont(new Font("Arial", Font.PLAIN, 9));
+		btnButtonPlus.setFont(new Font("Arial", Font.BOLD, 9));
 		
 		JButton btnButtonMinus = new JButton("-");
-		btnButtonMinus.addActionListener(new ActionListener() {
+		btnButtonMinus.setFont(new Font("Arial", Font.BOLD, 9));
+		
+		JButton btnButtonEqual = new JButton("=\r\n");
+		btnButtonEqual.setFont(new Font("Arial", Font.BOLD, 9));
+		
+		btnButtonDot.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonDotClicked(e);
+			}
+		});
+		btnButtonDivision.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonDivisionClicked(e);
+			}
+		});
+		btnButtonMultply.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonMultplyClicked(e);
+			}
+		});
+		btnButtonPlus.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonPlusClicked(e);
+			}
+		});
+		btnButtonMinus.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ifButtonMinusClicked(e);
 			}
 		});
 		
-		JButton btnButtonEqual = new JButton("=\r\n");
-		
-		display = new JTextField();
-		display.setColumns(10);
+		display = new JLabel();
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -185,4 +291,60 @@ public class CalculatorLayout extends JFrame {
 		String displayValue = display.getText();
 		display.setText(displayValue + "2");
 	}
+	private void ifButtonOneClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + "1"); 
+	}
+	private void ifButtonThreeClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + "3");
+	} 
+	private void ifButtonFourClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + "4");
+	} 
+	private void ifButtonFiveClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + "5");
+	} 
+	private void ifButtonSixClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + "6");
+	} 
+	private void ifButtonSevenClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + "7");
+	} 
+	private void ifButtonEightClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + "8");
+	} 
+	private void ifButtonNineClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + "9");
+	} 
+	private void ifButtonZeroClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + "0");
+	} 
+	private void ifButtonDotClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + ".");
+	} 
+	private void ifButtonPlusClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + "+");
+	} 
+	private void ifButtonMultplyClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + "X");
+	} 
+	private void ifButtonMinusClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + "-");
+	} 
+	private void ifButtonDivisionClicked(ActionEvent actionEvent) {
+		String displayValue = display.getText();
+		display.setText(displayValue + "/");
+	} 
 }
